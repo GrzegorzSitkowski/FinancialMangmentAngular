@@ -1,0 +1,41 @@
+<div class="container my-5">
+    <h1 class="mb-3">Edit Goal</h1>
+
+    <div class="row">
+        <div class="col-3">
+            <form #from="ngForm" (ngSubmit)="updateGoal()">
+              <div class="mb-3">
+                <label for="id" class="form-label">Id</label>
+                <input type="text" class="form-control" id="id" name="id" readonly [(ngModel)]="goalDetails.id">
+              </div>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" [(ngModel)]="goalDetails.name">
+              </div>
+              <div class="mb-3">
+                <label for="targetAmount" class="form-label">Target Amount</label>
+                <input type="number" class="form-control" id="targetAmount" name="targetAmount" [(ngModel)]="goalDetails.targetAmount">
+              </div>
+              <div class="mb-3">
+                <label for="savedAmount" class="form-label">Saved Amount</label>
+                <input type="number" class="form-control" id="savedAmount" name="savedAmount" [(ngModel)]="goalDetails.savedAmount">
+              </div>
+              <div class="mb-3">
+                <label for="date" class="form-label">Date</label>
+                <input type="date" class="form-control" id="date" name="date" [(ngModel)]="goalDetails.date">
+              </div>
+              <div class="mb-3">
+                <label for="note" class="form-label">Note</label>
+                <input type="text" class="form-control" id="note" name="note" [(ngModel)]="goalDetails.note">
+              </div>
+              <div class="mb-3">
+                <label for="CategoryId" class="form-label">CategoryId</label>
+                <input type="number" class="form-control" id="categoryId" name="categoryId" [(ngModel)]="goalDetails.categoryId">
+              </div>
+                <button type="submit" class="btn btn-primary mr-5">Save</button>
+                <button type="button" class="btn btn-danger mr-10" (click)="deleteGoal(goalDetails.id)">Remove</button>
+                
+              </form>
+        </div>
+    </div>
+</div>

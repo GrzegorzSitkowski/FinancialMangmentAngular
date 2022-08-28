@@ -1,0 +1,24 @@
+<div class="container" my-5>
+    <h1 class="mb-3">Goals</h1>
+
+    <table class="table table-striped" *ngIf="goals && goals.length > 0">
+        <thead>
+            <tr>
+                <th>Target Amount</th>
+                <th>Saved Amount</th>
+                <th>Desired Date</th>
+                <th>Category Id</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr *ngFor="let goal of goals">
+                  <td>{{goal.targetAmount} + ' zł'}</td>
+                  <td>{{goal.savedAmount + ' zł'}}</td>
+                  <td>{{goal.desiredDate}}</td>
+                  <td>{{goal.categoryId}}</td>
+                  <td><a [routerLink]="['/goals', 'edit']">View</a></td>
+                </tr>           
+        </tbody>
+    </table>
+    <p *ngIf="!goals || goals.length <= 0">No accounts found.</p>
+</div>

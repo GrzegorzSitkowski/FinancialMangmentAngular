@@ -1,0 +1,35 @@
+<div class="container my-5">
+    <h1 class="mb-3">Add New Goal</h1>
+
+    <div class="row">
+        <div class="col-3">
+            <form #from="ngForm" (ngSubmit)="addGoal()">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="name" name="name" [(ngModel)]="addGoalRequest.name">
+                </div>
+                <div class="mb-3">
+                  <label for="targetAmount" class="form-label">Target Amount</label>
+                  <input type="number" class="form-control" id="targetAmount" name="targetAmount" [(ngModel)]="addGoalRequest.targetAmount">
+                </div>
+                <div class="mb-3">
+                    <label for="savedAmount" class="form-label">Saved Amount</label>
+                    <input type="number" class="form-control" id="savedAmount" name="savedAmount" [(ngModel)]="addGoalRequest.savedAmount">
+                  </div>
+                  <div class="mb-3">
+                    <label for="desiredDate" class="form-label">Desired Date</label>
+                    <input type="date" class="form-control" id="desiredDate" name="desiredDate" [(ngModel)]="addGoalRequest.desiredDate">
+                  </div>
+                  <div class="mb-3">
+                    <label for="note" class="form-label">Note</label>
+                    <input type="text" class="form-control" id="note" name="note" [(ngModel)]="addGoalRequest.note">
+                  </div>
+                  <div class="mb-3">
+                    <label for="categoryId" class="form-label">Category Id</label>
+                    <input type="number" class="form-control" id="categoryId" name="categoryId" [(ngModel)]="addGoalRequest.categoryId">
+                  </div>
+                <button type="submit" class="btn btn-primary">Save</button>
+              </form>
+        </div>
+    </div>
+</div>
