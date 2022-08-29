@@ -7,6 +7,7 @@ import { AddGoalComponent } from './components/goals/add-goal/add-goal.component
 import { EditGoalComponent } from './components/goals/edit-goal/edit-goal.component';
 import { GoalsListComponent } from './components/goals/goals-list/goals-list.component';
 import { AddProductComponent } from './components/products/add-product/add-product.component';
+import { EditProductComponent } from './components/products/edit-product/edit-product.component';
 import { ProductsListComponent } from './components/products/products-list/products-list.component';
 
 const routes: Routes = [
@@ -48,7 +49,7 @@ const routes: Routes = [
   },
   {
     path: 'products/edit/:id',
-    component: EditAccountComponent
+    component: EditProductComponent
   }
 ];
 
