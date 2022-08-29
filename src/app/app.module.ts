@@ -11,6 +11,7 @@ import { EditAccountComponent } from './components/accounts/edit-account/edit-ac
 import { GoalsListComponent } from './components/goals/goals-list/goals-list.component';
 import { AddGoalComponent } from './components/goals/add-goal/add-goal.component';
 import { EditGoalComponent } from './components/goals/edit-goal/edit-goal.component';
+import { ProductsListComponent } from './components/products/products-list/products-list.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { EditGoalComponent } from './components/goals/edit-goal/edit-goal.compon
     EditAccountComponent,
     GoalsListComponent,
     AddGoalComponent,
-    EditGoalComponent
+    EditGoalComponent,
+    ProductsListComponent
   ],
   imports: [
     BrowserModule,
