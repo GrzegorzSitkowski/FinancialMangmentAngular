@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { AccountAdd } from 'src/app/models/accounts/accountAdd.model';
 import { Product } from 'src/app/models/products/product.model';
 import { ProductAdd } from 'src/app/models/products/productAdd.model';
+import { ProductEdit } from 'src/app/models/products/productEdit.model';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -20,5 +21,13 @@ export class ProductsService {
 
   addProduct(addProductRequest: ProductAdd): Observable<ProductAdd>{
     return this.http.post<ProductAdd>(this.baseApiUrl + '/api/products', addProductRequest);
+  }
+
+  getProduct(id: string): Observable<ProductEdit>{
+    return this.http.get<ProductEdit>(this.baseApiUrl + '/api/products/' + id);
+  }
+
+  updateProduct(id: string, updateProductRequest: ProductEdit): Observable<ProductEdit>{
+    return this.http.put<ProductEdit>(this.baseApiUrl + '/api/products/' + id, updateProductRequest);
   }
 }

@@ -45,6 +45,10 @@ const routes: Routes = [
   {
     path: 'products/add',
     component: AddProductComponent
+  },
+  {
+    path: 'products/edit/:id',
+    component: EditAccountComponent
   }
 ];
 
