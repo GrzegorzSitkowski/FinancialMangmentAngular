@@ -1,5 +1,5 @@
 export interface ProductAdd{
-    name: string;
+    product: string;
     price: number;
     done: boolean;
 }

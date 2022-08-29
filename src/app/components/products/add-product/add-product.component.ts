@@ -9,10 +9,11 @@ import { ProductsService } from 'src/app/services/products/products.service';
   styleUrls: ['./add-product.component.css']
 })
 export class AddProductComponent implements OnInit {
-  addProductRequest : ProductAdd = {
-    name: '',
+
+  addProductRequest: ProductAdd = {
+    product: '',
     price: 0,
-    done: false
+    done: true
   };
 
   constructor(private productService: ProductsService, private router: Router) { }
@@ -21,9 +22,9 @@ export class AddProductComponent implements OnInit {
   }
 
   addProduct(){
-    this.productService.addproduct(this.addProductRequest)
+    this.productService.addProduct(this.addProductRequest)
     .subscribe({
-      next:(product) => {
+      next: (product) => {
         this.router.navigate(['products']);
       }
     });
