@@ -38,7 +38,7 @@ const routes: Routes = [
     component: EditGoalComponent
   },
   {
-    path: 'productss',
+    path: 'products',
     component: ProductsListComponent
   }
 ];
