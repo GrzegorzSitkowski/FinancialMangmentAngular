@@ -14,6 +14,7 @@ import { EditGoalComponent } from './components/goals/edit-goal/edit-goal.compon
 import { ProductsListComponent } from './components/products/products-list/products-list.component';
 import { AddProductComponent } from './components/products/add-product/add-product.component';
 import { EditProductComponent } from './components/products/edit-product/edit-product.component';
+import { TransfersListComponent } from './components/transfers/transfers-list/transfers-list.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { EditProductComponent } from './components/products/edit-product/edit-pr
     EditGoalComponent,
     ProductsListComponent,
     AddProductComponent,
-    EditProductComponent
+    EditProductComponent,
+    TransfersListComponent
   ],
   imports: [
     BrowserModule,
