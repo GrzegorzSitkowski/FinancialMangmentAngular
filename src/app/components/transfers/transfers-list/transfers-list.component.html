@@ -1,1 +1,24 @@
-<p>transfers-list works!</p>
+<div class="container" my-5>
+    <h1 class="mb-3">Transfers</h1>
+
+    <table class="table table-striped" *ngIf="transfers && transfers.length > 0">
+        <thead>
+            <tr>
+                <th>Amount</th>
+                <th>CategoryId</th>
+                <th>Date</th>
+                <th>AccountId</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr *ngFor="let transfer of transfers">
+                  <td>{{transfer.amount}}</td>
+                  <td>{{transfer.categoryId}}</td>
+                  <td>{{transfer.date}}</td>
+                  <td>{{transfer.accountId}}</td>
+                  <td><a [routerLink]="['/transfers', 'edit']">View</a></td>
+                </tr>           
+        </tbody>
+    </table>
+    <p *ngIf="!transfers || transfers.length <= 0">No transfers found.</p>
+</div>
