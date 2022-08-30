@@ -10,6 +10,7 @@ import { AddProductComponent } from './components/products/add-product/add-produ
 import { EditProductComponent } from './components/products/edit-product/edit-product.component';
 import { ProductsListComponent } from './components/products/products-list/products-list.component';
 import { AddTransferComponent } from './components/transfers/add-transfer/add-transfer.component';
+import { EditTransferComponent } from './components/transfers/edit-transfer/edit-transfer.component';
 import { TransfersListComponent } from './components/transfers/transfers-list/transfers-list.component';
 
 const routes: Routes = [
@@ -59,6 +60,10 @@ const routes: Routes = [
   {
     path: 'transfers/add',
     component: AddTransferComponent
+  },
+  {
+    path: 'transfers/edit/:id',
+    component: EditTransferComponent
   }
 ];
 
