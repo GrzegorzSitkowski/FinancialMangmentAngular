@@ -29,4 +29,8 @@ export class TransfersService {
   updateTransfer(id: string, updateTransferRequest: TransferEdit): Observable<TransferEdit>{
     return this.http.put<TransferEdit>(this.baseApiUrl + '/api/transfers/' + id, updateTransferRequest);
   }
+
+  deleteTransfer(id: string): Observable<TransferEdit>{
+    return this.http.delete<TransferEdit>(this.baseApiUrl + '/api/transfers/' + id);
+  }
 }
