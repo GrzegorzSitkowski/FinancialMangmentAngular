@@ -15,6 +15,7 @@ import { ProductsListComponent } from './components/products/products-list/produ
 import { AddProductComponent } from './components/products/add-product/add-product.component';
 import { EditProductComponent } from './components/products/edit-product/edit-product.component';
 import { TransfersListComponent } from './components/transfers/transfers-list/transfers-list.component';
+import { AddTransferComponent } from './components/transfers/add-transfer/add-transfer.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { TransfersListComponent } from './components/transfers/transfers-list/tr
     ProductsListComponent,
     AddProductComponent,
     EditProductComponent,
-    TransfersListComponent
+    TransfersListComponent,
+    AddTransferComponent
   ],
   imports: [
     BrowserModule,
