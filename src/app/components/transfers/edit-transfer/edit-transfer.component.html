@@ -1,1 +1,35 @@
-<p>edit-transfer works!</p>
+<div class="container my-5">
+    <h1 class="mb-3">Add New Product</h1>
+
+    <div class="row">
+        <div class="col-3">
+            <form #from="ngForm" (ngSubmit)="updateTransfer()">
+                <div class="mb-3">
+                    <label for="id" class="form-label">Id</label>
+                    <input type="text" class="form-control" id="id" name="id" readonly [(ngModel)]="transferDetails.id">
+                </div>
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="name" name="name" [(ngModel)]="transferDetails.name">
+                </div>
+                <div class="mb-3">
+                    <label for="typeId" class="form-label">TypeId</label>
+                    <input type="number" class="form-control" id="typeId" name="typeId" [(ngModel)]="transferDetails.typeId">
+                </div>
+                <div class="mb-3">
+                    <label for="categoryId" class="form-label">CategoryId</label>
+                    <input type="number" class="form-control" id="categoryId" name="categoryId" [(ngModel)]="transferDetails.categoryId">
+                </div>
+                <div class="mb-3">
+                    <label for="date" class="form-label">Date</label>
+                    <input type="date" class="form-control" id="date" name="date" [(ngModel)]="transferDetails.date">
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <input type="text" class="form-control" id="description" name="description" [(ngModel)]="transferDetails.description">
+                </div>
+                <button type="submit" class="btn btn-primary">Save</button>
+              </form>
+        </div>
+    </div>
+</div>
