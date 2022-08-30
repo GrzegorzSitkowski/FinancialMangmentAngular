@@ -16,6 +16,7 @@ import { AddProductComponent } from './components/products/add-product/add-produ
 import { EditProductComponent } from './components/products/edit-product/edit-product.component';
 import { TransfersListComponent } from './components/transfers/transfers-list/transfers-list.component';
 import { AddTransferComponent } from './components/transfers/add-transfer/add-transfer.component';
+import { EditTransferComponent } from './components/transfers/edit-transfer/edit-transfer.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { AddTransferComponent } from './components/transfers/add-transfer/add-tr
     AddProductComponent,
     EditProductComponent,
     TransfersListComponent,
-    AddTransferComponent
+    AddTransferComponent,
+    EditTransferComponent
   ],
   imports: [
     BrowserModule,
