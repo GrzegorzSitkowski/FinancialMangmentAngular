@@ -1,1 +1,39 @@
-<p>add-transfer works!</p>
+<div class="container my-5">
+    <h1 class="mb-3">Add New Transfer</h1>
+
+    <div class="row">
+        <div class="col-3">
+            <form #from="ngForm" (ngSubmit)="addTransfer()">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="name" name="name" [(ngModel)]="addTransferRequest.name">
+                </div>
+                <div class="mb-3">
+                    <label for="amount" class="form-label">Amount</label>
+                    <input type="number" class="form-control" id="amount" name="amount" [(ngModel)]="addTransferRequest.amount">
+                </div>
+                <div class="mb-3">
+                    <label for="typeId" class="form-label">TypeId</label>
+                    <input type="number" class="form-control" id="typeId" name="typeId" [(ngModel)]="addTransferRequest.typeId">
+                </div>
+                <div class="mb-3">
+                    <label for="categoryId" class="form-label">CategoryId</label>
+                    <input type="number" class="form-control" id="categoryId" name="categoryId" [(ngModel)]="addTransferRequest.categoryId">
+                </div>
+                <div class="mb-3">
+                    <label for="date" class="form-label">Date</label>
+                    <input type="date" class="form-control" id="date" name="date" [(ngModel)]="addTransferRequest.date">
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <input type="text" class="form-control" id="description" name="description" [(ngModel)]="addTransferRequest.description">
+                </div>
+                <div class="mb-3">
+                    <label for="accountId" class="form-label">AccountId</label>
+                    <input type="number" class="form-control" id="accountId" name="accountId" [(ngModel)]="addTransferRequest.accountId">
+                </div>
+                <button type="submit" class="btn btn-primary">Save</button>
+              </form>
+        </div>
+    </div>
+</div>
