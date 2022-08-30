@@ -45,4 +45,13 @@ export class EditTransferComponent implements OnInit {
     });
   }
 
+  deleteTransfer(id: string){
+    this.transferService.deleteTransfer(id)
+    .subscribe({
+      next: (response) => {
+        this.router.navigate(['transfers']);
+      }
+    });
+  }
+
 }
