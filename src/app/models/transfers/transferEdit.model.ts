@@ -1,4 +1,4 @@
-export interface TansferEdit{
+export interface TransferEdit{
     id: string;
     name: string;
     typeId: number;
