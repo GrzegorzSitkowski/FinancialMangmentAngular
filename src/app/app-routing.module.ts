@@ -15,10 +15,6 @@ import { TransfersListComponent } from './components/transfers/transfers-list/tr
 
 const routes: Routes = [
   {
-    path: '',
-    component: AccountsListComponent
-  },
-  {
     path: 'accounts',
     component: AccountsListComponent
   },
