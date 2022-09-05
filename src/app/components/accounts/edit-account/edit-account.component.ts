@@ -13,7 +13,8 @@ export class EditAccountComponent implements OnInit {
   accountDetails: AccountEdit = {
     id: '',
     name: '',
-    amount: 0
+    amount: 0,
+    typeId: 0
   };
 
   constructor(private route: ActivatedRoute, private accountService: accountsService.AccountsService, private router: Router) { }

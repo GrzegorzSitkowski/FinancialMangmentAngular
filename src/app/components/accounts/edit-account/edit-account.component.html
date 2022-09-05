@@ -16,6 +16,10 @@
                   <label for="amount" class="form-label">Balance</label>
                   <input type="number" class="form-control" id="amount" name="amount" [(ngModel)]="accountDetails.amount">
                 </div>
+                <div class="mb-3">
+                  <label for="typeId" class="form-label">Type</label>
+                  <input type="number" class="form-control" id="typeId" name="typeId" [(ngModel)]="accountDetails.typeId">
+                </div>
                 <button type="submit" class="btn btn-primary mr-5">Save</button>
                 <button type="button" class="btn btn-danger mr-10" (click)="deleteAccount(accountDetails.id)">Remove</button>
               </form>
