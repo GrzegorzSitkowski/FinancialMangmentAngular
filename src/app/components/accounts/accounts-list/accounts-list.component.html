@@ -1,17 +1,31 @@
 <div class="container" my-5>
-    <h1 class="mb-3">Accounts</h1>
+    <h1 class="mb-3">List of accounts</h1>
 
-    <table class="table table-striped" *ngIf="accounts && accounts.length > 0">
+    <table class="table table-dark table-striped" *ngIf="accounts && accounts.length > 0">
         <thead>
             <tr>
                 <th>Name</th>
-                <th>Amount</th>
+                <th>Balance</th>
+                <th>Type</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
-                <tr *ngFor="let account of accounts">
+                <tr *ngFor="let account of accounts" [ngSwitch]="account.typeId">
                   <td>{{account.name}}</td>
                   <td>{{account.amount + ' zł'}}</td>
+                  <td *ngSwitchCase="'0'">{{'Null'}}</td>
+                  <td *ngSwitchCase="'1'">{{'General'}}</td>
+                  <td *ngSwitchCase="'2'">{{'Cash'}}</td>
+                  <td *ngSwitchCase="'3'">{{'Current account'}}</td>
+                  <td *ngSwitchCase="'4'">{{'Credit card'}}</td>
+                  <td *ngSwitchCase="'5'">{{'Saving account'}}</td>
+                  <td *ngSwitchCase="'6'">{{'Bonus'}}</td>
+                  <td *ngSwitchCase="'7'">{{'Insurance'}}</td>
+                  <td *ngSwitchCase="'8'">{{'Investment'}}</td>
+                  <td *ngSwitchCase="'9'">{{'Loan'}}</td>
+                  <td *ngSwitchCase="'10'">{{'Mortage'}}</td>
+                  <td *ngSwitchCase="'11'">{{'Account with overdraft'}}</td>
                   <td><a [routerLink]="['/accounts', 'edit']">View</a></td>
                 </tr>           
         </tbody>
