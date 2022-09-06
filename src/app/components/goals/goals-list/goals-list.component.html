@@ -7,18 +7,24 @@
                 <th>Name</th>
                 <th>Target Amount</th>
                 <th>Saved Amount</th>
-                <th>Desired Date</th>
-                <th>Category Id</th>
+                <th>Type</th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
-                <tr *ngFor="let goal of goals">
+                <tr *ngFor="let goal of goals" [ngSwitch]="goal.categoryId">
                   <td>{{goal.name}}</td>
                   <td>{{goal.targetAmount + ' zł'}}</td>
                   <td>{{goal.savedAmount + ' zł'}}</td>
-                  <td>{{goal.desiredDate}}</td>
-                  <td>{{goal.categoryId}}</td>
+                  <td *ngSwitchCase="'1'">{{'New vehicle'}}</td>
+                  <td *ngSwitchCase="'2'">{{'New home'}}</td>
+                  <td *ngSwitchCase="'3'">{{'Holiday trip'}}</td>
+                  <td *ngSwitchCase="'4'">{{'Education'}}</td>
+                  <td *ngSwitchCase="'5'">{{'Emergency fund'}}</td>
+                  <td *ngSwitchCase="'6'">{{'Health cate'}}</td>
+                  <td *ngSwitchCase="'7'">{{'Party'}}</td>
+                  <td *ngSwitchCase="'8'">{{'Kids spoiling'}}</td>
+                  <td *ngSwitchCase="'9'">{{'Chority'}}</td>
                   <td><a [routerLink]="['/goals', 'edit']">View</a></td>
                 </tr>           
         </tbody>
