@@ -1,6 +1,6 @@
 <div class="container" my-5>
     <h1 class="mb-3">Transfers</h1>
-
+    <button type="button" class="btn btn-primary" routerLink="add">Add transfer</button>
     <table class="table table-dark table-striped" *ngIf="transfers && transfers.length > 0">
         <thead>
             <tr>
@@ -29,7 +29,8 @@
                   <td *ngSwitchCase="'11'">{{'Others'}}</td>
                   <td>{{transfer.date}}</td>
                   <td>{{transfer.accountId}}</td>
-                  <td><a [routerLink]="['/transfers', 'edit', transfer.id]">View</a></td>
+                  <td>
+                    <button type="button" class="btn btn-warning" [routerLink]="['/transfers', 'edit', transfer.id]">Edit</button>
                 </tr>           
         </tbody>
     </table>
