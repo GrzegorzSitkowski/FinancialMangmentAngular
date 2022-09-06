@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AccountEdit } from 'src/app/models/accounts/accountEdit.model';
-import * as accountsService from 'src/app/services/accounts/accounts.service';
+import { AccountsService} from 'src/app/services/accounts/accounts.service';
 
 @Component({
   selector: 'app-edit-account',
@@ -17,7 +17,7 @@ export class EditAccountComponent implements OnInit {
     typeId: 0
   };
 
-  constructor(private route: ActivatedRoute, private accountService: accountsService.AccountsService, private router: Router) { }
+  constructor(private route: ActivatedRoute, private accountService: AccountsService, private router: Router) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe({

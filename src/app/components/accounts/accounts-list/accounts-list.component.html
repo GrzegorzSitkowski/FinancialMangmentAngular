@@ -27,7 +27,9 @@
                   <td *ngSwitchCase="'9'">{{'Loan'}}</td>
                   <td *ngSwitchCase="'10'">{{'Mortage'}}</td>
                   <td *ngSwitchCase="'11'">{{'Account with overdraft'}}</td>
-                  <td><a [routerLink]="['/accounts', 'edit', account.id]">Edit</a></td>
+                  <td>
+                    <button type="button" class="btn btn-warning" [routerLink]="['/accounts', 'edit', account.id]">Edit</button>
+                </td>
                 </tr>           
         </tbody>
     </table>
