@@ -1,22 +1,35 @@
 <div class="container" my-5>
     <h1 class="mb-3">Transfers</h1>
 
-    <table class="table table-striped" *ngIf="transfers && transfers.length > 0">
+    <table class="table table-dark table-striped" *ngIf="transfers && transfers.length > 0">
         <thead>
             <tr>
+                <th>Name</th>
                 <th>Amount</th>
-                <th>CategoryId</th>
+                <th>Category</th>
                 <th>Date</th>
                 <th>AccountId</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
-                <tr *ngFor="let transfer of transfers">
+                <tr *ngFor="let transfer of transfers" [ngSwitch]="transfer.categoryId">
+                  <td>{{transfer.name}}</td>
                   <td>{{transfer.amount}}</td>
-                  <td>{{transfer.categoryId}}</td>
+                  <td *ngSwitchCase="'1'">{{'Food & Drinks'}}</td>
+                  <td *ngSwitchCase="'2'">{{'Shopping'}}</td>
+                  <td *ngSwitchCase="'3'">{{'housing'}}</td>
+                  <td *ngSwitchCase="'4'">{{'Transportation'}}</td>
+                  <td *ngSwitchCase="'5'">{{'Vehicle'}}</td>
+                  <td *ngSwitchCase="'6'">{{'Life & Entertainment'}}</td>
+                  <td *ngSwitchCase="'7'">{{'Communicationn, PC'}}</td>
+                  <td *ngSwitchCase="'8'">{{'Financial expenses'}}</td>
+                  <td *ngSwitchCase="'9'">{{'Investments'}}</td>
+                  <td *ngSwitchCase="'10'">{{'Income'}}</td>
+                  <td *ngSwitchCase="'11'">{{'Others'}}</td>
                   <td>{{transfer.date}}</td>
                   <td>{{transfer.accountId}}</td>
-                  <td><a [routerLink]="['/transfers', 'edit']">View</a></td>
+                  <td><a [routerLink]="['/transfers', 'edit', transfer.id]">View</a></td>
                 </tr>           
         </tbody>
     </table>
