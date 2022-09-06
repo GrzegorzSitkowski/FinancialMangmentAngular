@@ -21,11 +21,13 @@
                   <td *ngSwitchCase="'3'">{{'Holiday trip'}}</td>
                   <td *ngSwitchCase="'4'">{{'Education'}}</td>
                   <td *ngSwitchCase="'5'">{{'Emergency fund'}}</td>
-                  <td *ngSwitchCase="'6'">{{'Health cate'}}</td>
+                  <td *ngSwitchCase="'6'">{{'Health care'}}</td>
                   <td *ngSwitchCase="'7'">{{'Party'}}</td>
                   <td *ngSwitchCase="'8'">{{'Kids spoiling'}}</td>
                   <td *ngSwitchCase="'9'">{{'Chority'}}</td>
-                  <td><a [routerLink]="['/goals', 'edit', goal.id]">View</a></td>
+                  <td>
+                    <button type="button" class="btn btn-warning" [routerLink]="['/goals', 'edit', goal.id]">Edit</button>
+                </td>
                 </tr>           
         </tbody>
     </table>
